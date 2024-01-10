@@ -6,9 +6,11 @@ This C++ application demonstrates an advanced search engine functionality that p
 
 The program implements the following functions:
 
-- `buildInvertedIndex`: Builds an inverted index for a given dataset, mapping words to their respective positions in the dataset.
-- `search`: Conducts searches using the inverted index across multiple datasets and displays the matching results.
-
+- `buildInvertedIndex`: Generates an inverted index for a given dataset, mapping words to their respective positions in the dataset.
+- `search`: Executes searches using the inverted index across multiple datasets and displays the matching results.
+- `displaySearchStats`: Shows statistics of the search results, such as the number of matches per dataset.
+- `getSentimentScore`: (For demonstration only) Calculates a mock sentiment score for a given text.
+  
 ## Functionality
 
 ### Datasets Available
