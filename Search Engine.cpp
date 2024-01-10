@@ -37,6 +37,25 @@ std::vector<std::pair<std::string, std::string>> search(const std::unordered_map
     return results;
 }
 
+void displaySearchStats(const std::vector<std::pair<std::string, std::string>>& searchResults) {
+    std::unordered_map<std::string, int> stats;
+
+    for (const auto& result : searchResults) {
+        stats[result.second]++;
+    }
+
+    std::cout << "Search Results Statistics:" << std::endl;
+    for (const auto& item : stats) {
+        std::cout << "- " << std::setw(12) << item.first << ": " << item.second << " matches" << std::endl;
+    }
+}
+
+double getSentimentScore(const std::string& text) {
+    // For demonstration, generate a mock sentiment score
+    // Instead of an API call, this generates a random score
+    return static_cast<double>(rand() % 100) / 100.0; // Random score between 0 and 1
+}
+
 int main() {
     // Sample data for four different datasets
     std::vector<std::string> fruits = {
@@ -48,7 +67,7 @@ int main() {
     };
 
     std::vector<std::string> countries = {
-        "usa", "canada", "france", "germany", "japan", "india", "australia"
+        "usa", "canada", "france", "germany", "japan", "india", "australia", "usa"
     };
 
     std::vector<std::string> numbers = {
@@ -95,6 +114,9 @@ int main() {
             for (const auto& result : searchResults) {
                 std::cout << "- " << std::setw(12) << result.second << ": " << result.first << std::endl;
             }
+
+            // Display search statistics
+            displaySearchStats(searchResults);
         }
     }
 
