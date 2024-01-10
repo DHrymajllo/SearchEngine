@@ -36,4 +36,5 @@ The C++ code comprises several functions:
 
 - `buildInvertedIndex`: Constructs an inverted index for each dataset.
 - `search`: Conducts a search across datasets based on user input.
+- `displaySearchStats`: Shows statistics related to the search results.
 - `main`: Contains the main program logic, including user interaction and result display.
